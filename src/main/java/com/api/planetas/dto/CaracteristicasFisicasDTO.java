@@ -16,6 +16,16 @@ public class CaracteristicasFisicasDTO {
 
 	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDiametroEquatorial() {
+		return diametroEquatorial;
+	}
+
 	public void setDiametroEquatorial(String diametroEquatorial) {
 		this.diametroEquatorial = diametroEquatorial;
 	}

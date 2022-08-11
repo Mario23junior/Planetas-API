@@ -17,7 +17,7 @@ API REST de código aberto para dados de consulta de  pesquisa  as informaçõ
 Algums parametros de ação são necessarios para a execução
 ### 📋 Pré-requisitos
  
-* [Java11](http://www.dropwizard.io/1.0.2/docs/)
+* [Java17](http://www.dropwizard.io/1.0.2/docs/)
 * [Spring boot](https://spring.io/projects/spring-boot)
 * [H2](https://www.h2database.com/html/main.html)
 * [Swagger](https://swagger.io/)

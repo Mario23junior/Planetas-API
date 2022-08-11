@@ -45,7 +45,7 @@ http://localhost:8080/swagger-ui.html
 ## Uso
 
 ```
-https://system-solar-planetary.herokuapp.com/api/v1/planetary/planetal/
+
 ```
 
 ## Resultado dos dados da API

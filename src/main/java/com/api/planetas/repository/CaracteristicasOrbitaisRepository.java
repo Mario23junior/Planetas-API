@@ -2,6 +2,8 @@ package com.api.planetas.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CaracteristicasOrbitaisRepository extends JpaRepository<CaracteristicasOrbitaisRepository, Long>{
+import com.api.planetas.model.CaracteristicasOrbitais;
+
+public interface CaracteristicasOrbitaisRepository extends JpaRepository<CaracteristicasOrbitais, Long>{
 
 }

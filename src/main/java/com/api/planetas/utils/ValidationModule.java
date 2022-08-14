@@ -10,7 +10,7 @@ import com.api.planetas.repository.PlanetasRepository;
 
 @Service
 public class ValidationModule {
-	
+
 	private PlanetasRepository repository;
 	private ModelMapper mapper;
 
@@ -18,13 +18,12 @@ public class ValidationModule {
 		this.repository = repository;
 		this.mapper = mapper;
 	}
-  
+
 	public void ValidValueDuplicate(PlanetasDTO planetasDto) {
-		
 		PlanetasDTO dtoPlane = mapper.map(planetasDto, PlanetasDTO.class);
 		Planetas systemFind = repository.findByNome(planetasDto.getNome());
-		if(systemFind != null && systemFind.getId() != dtoPlane.getId()) {
-			throw new ReturnErroFindNotFound("Planeta "+planetasDto.getNome()+" Já esta cadastro na base de dados");
+		if (systemFind != null && systemFind.getId() != dtoPlane.getId()) {
+			throw new ReturnErroFindNotFound("Planeta " + planetasDto.getNome() + " Já esta cadastro na base de dados");
 		}
 	}
 }

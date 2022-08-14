@@ -7,7 +7,7 @@ public class PlanetasDTO {
 	private String nome;
 	private String areaSuperficie;
 	private Double raio;
-	private Double distanciaDoSo;
+	private Double distanciaDoSol;
 	private String duracaoDoDia;
 	private String descricao;
 
@@ -55,12 +55,12 @@ public class PlanetasDTO {
 		this.raio = raio;
 	}
 
-	public Double getDistanciaDoSo() {
-		return distanciaDoSo;
+	public Double getDistanciaDoSol() {
+		return distanciaDoSol;
 	}
 
-	public void setDistanciaDoSo(Double distanciaDoSo) {
-		this.distanciaDoSo = distanciaDoSo;
+	public void setDistanciaDoSol(Double distanciaDoSol) {
+		this.distanciaDoSol = distanciaDoSol;
 	}
 
 	public String getDuracaoDoDia() {

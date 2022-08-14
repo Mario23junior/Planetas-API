@@ -69,13 +69,15 @@ public class PlanetaService {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public ResponseEntity<PlanetasDTO> delete(Long id) {
+		Optional<Planetas> findId = planetasRepository.findById(id);
+		if(findId.isPresent()) {
+			planetasRepository.delete(findId.get());
+			return new ResponseEntity<>(HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
 	
 }

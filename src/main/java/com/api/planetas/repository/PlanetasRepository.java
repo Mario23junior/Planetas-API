@@ -6,4 +6,6 @@ import com.api.planetas.model.Planetas;
 
 public interface PlanetasRepository extends JpaRepository<Planetas, Long>{
 
+	Planetas findByNome(String nome);
+
 }

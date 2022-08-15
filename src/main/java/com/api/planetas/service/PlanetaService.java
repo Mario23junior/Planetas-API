@@ -14,44 +14,37 @@ import com.api.planetas.utils.ValidationModule;
 
 @Service
 public class PlanetaService {
-  
+
 	private ModelMapper mapper;
 	private PlanetasRepository planetasRepository;
-	
+
 	private ValidationModule validationRepeat;
-	
-	public PlanetaService(ModelMapper mapper, PlanetasRepository planetasRepository,ValidationModule validationRepeat) {
+
+	public PlanetaService(ModelMapper mapper, PlanetasRepository planetasRepository,
+			ValidationModule validationRepeat) {
 		super();
 		this.mapper = mapper;
 		this.planetasRepository = planetasRepository;
 		this.validationRepeat = validationRepeat;
 	}
 
-//	public ResponseEntity<PlanetasDTO> savePlanet(PlanetasDTO planetasDTO) {
-//		validationRepeat.ValidValueDuplicate(planetasDTO);
-// 		Planetas saveplanet = bodySave(mapper.map(planetasDTO, Planetas.class));
-//		return ResponseEntity
-//				   .status(HttpStatus.OK)
-//				   .body(mapper.map(saveplanet, PlanetasDTO.class));
-//	}
-	
-	public Planetas bodySave(Planetas planeta) {
-		return planetasRepository.save(planeta);
+	public Planetas savePlanet(Planetas planetas) {
+//		validationRepeat.ValidValueDuplicate(planetas);
+		return planetasRepository.save(planetas);
 	}
-	
+
 	public ResponseEntity<PlanetasDTO> listId(Long id) {
 		Optional<Planetas> idPla = planetasRepository.findById(id);
-		if(idPla.isPresent()) {
+		if (idPla.isPresent()) {
 			return ResponseEntity.ok(mapper.map(idPla.get(), PlanetasDTO.class));
- 		} else {
+		} else {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
-	
-	
+
 	public ResponseEntity<PlanetasDTO> update(Long id, PlanetasDTO planetasDto) {
 		Optional<Planetas> planetsBody = planetasRepository.findById(id);
-		if(planetsBody.isPresent()) {
+		if (planetsBody.isPresent()) {
 			Planetas planetsUpda = planetsBody.get();
 			planetsUpda.setNome(planetasDto.getNome());
 			planetsUpda.setUrlImage(planetasDto.getUrlImage());
@@ -60,24 +53,21 @@ public class PlanetaService {
 			planetsUpda.setDistanciaDoSol(planetasDto.getDistanciaDoSol());
 			planetsUpda.setDuracaoDoDia(planetasDto.getDuracaoDoDia());
 			planetsUpda.setDescricao(planetasDto.getDescricao());
- 
 			planetasRepository.save(planetsUpda);
 			return ResponseEntity.ok(mapper.map(planetsUpda, PlanetasDTO.class));
-		}else {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);			
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
-	
-	
 
 	public ResponseEntity<PlanetasDTO> delete(Long id) {
 		Optional<Planetas> findId = planetasRepository.findById(id);
-		if(findId.isPresent()) {
+		if (findId.isPresent()) {
 			planetasRepository.delete(findId.get());
 			return new ResponseEntity<>(HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
-	
+
 }

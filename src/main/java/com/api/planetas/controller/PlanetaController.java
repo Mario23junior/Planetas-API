@@ -26,7 +26,7 @@ public class PlanetaController {
 
 	@PostMapping
 	Planetas save(@RequestBody Planetas planetas) {
-		return service.bodySave(planetas);
+		return service.savePlanet(planetas);
 	}
 	
 	@GetMapping("{id}")

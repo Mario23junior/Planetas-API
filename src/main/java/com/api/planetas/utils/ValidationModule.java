@@ -26,4 +26,11 @@ public class ValidationModule {
 			throw new ReturnErroFindNotFound("Planeta " + planetasDto.getNome() + " Já esta cadastro na base de dados");
 		}
 	}
+	
+	public void ValidValueDuplicate(Planetas planetas) {
+ 		Planetas systemFind = repository.findByNome(planetas.getNome());
+		if (systemFind != null && systemFind.getId() != systemFind.getId()) {
+			throw new ReturnErroFindNotFound("Planeta " + planetas.getNome() + " Já esta cadastro na base de dados");
+		}
+	}
 }

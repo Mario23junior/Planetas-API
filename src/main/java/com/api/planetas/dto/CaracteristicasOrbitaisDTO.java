@@ -1,5 +1,7 @@
 package com.api.planetas.dto;
 
+import javax.persistence.ManyToOne;
+
 public class CaracteristicasOrbitaisDTO {
 	
 	private Long id;
@@ -10,6 +12,18 @@ public class CaracteristicasOrbitaisDTO {
 	private Double gravidade;
 	private Double periodoDeRotacao;
 	
+	@ManyToOne
+	private PlanetasDTO planetasDto;
+	
+	
+	public PlanetasDTO getPlanetasDto() {
+		return planetasDto;
+	}
+
+	public void setPlanetasDto(PlanetasDTO planetasDto) {
+		this.planetasDto = planetasDto;
+	}
+
 	public CaracteristicasOrbitaisDTO() {
  	}
 

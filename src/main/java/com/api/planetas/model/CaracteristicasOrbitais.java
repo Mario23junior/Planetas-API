@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class CaracteristicasOrbitais {
@@ -17,6 +18,9 @@ public class CaracteristicasOrbitais {
 	private Integer numeroDeSatelitesNaturais;
 	private Double gravidade;
 	private Double periodoDeRotacao;
+	
+	@ManyToOne
+	private Planetas planetas;
 	
 	public CaracteristicasOrbitais() {
  	}
@@ -76,6 +80,16 @@ public class CaracteristicasOrbitais {
 	public void setPeriodoDeRotacao(Double periodoDeRotacao) {
 		this.periodoDeRotacao = periodoDeRotacao;
 	}
+
+	public Planetas getPlanetas() {
+		return planetas;
+	}
+
+	public void setPlanetas(Planetas planetas) {
+		this.planetas = planetas;
+	}
+	
+	
 	
 	
 }

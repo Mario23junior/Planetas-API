@@ -1,9 +1,13 @@
 package com.api.planetas.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Planetas {
@@ -18,6 +22,18 @@ public class Planetas {
 	private Double distanciaDoSol;
 	private String duracaoDoDia;
 	private String descricao;
+
+	@OneToMany(mappedBy = "planetas", cascade = CascadeType.ALL)
+	private List<CaracteristicasFisicas> caracteristicasFisicas;
+
+	@OneToMany(mappedBy = "planetas", cascade = CascadeType.ALL)
+	private List<CaracteristicasOrbitais> caracteristicasOrbitais;
+
+	@OneToMany(mappedBy = "planetas", cascade = CascadeType.ALL)
+	private List<ComposicaoAtmosfericas> composicaoAtmosfericas;
+
+	@OneToMany(mappedBy = "planetas", cascade = CascadeType.ALL)
+	private List<Luas> luas;
 
 	public Planetas() {
 		// TODO Auto-generated constructor stub
@@ -85,6 +101,38 @@ public class Planetas {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public List<CaracteristicasFisicas> getCaracteristicasFisicas() {
+		return caracteristicasFisicas;
+	}
+
+	public void setCaracteristicasFisicas(List<CaracteristicasFisicas> caracteristicasFisicas) {
+		this.caracteristicasFisicas = caracteristicasFisicas;
+	}
+
+	public List<CaracteristicasOrbitais> getCaracteristicasOrbitais() {
+		return caracteristicasOrbitais;
+	}
+
+	public void setCaracteristicasOrbitais(List<CaracteristicasOrbitais> caracteristicasOrbitais) {
+		this.caracteristicasOrbitais = caracteristicasOrbitais;
+	}
+
+	public List<ComposicaoAtmosfericas> getComposicaoAtmosfericas() {
+		return composicaoAtmosfericas;
+	}
+
+	public void setComposicaoAtmosfericas(List<ComposicaoAtmosfericas> composicaoAtmosfericas) {
+		this.composicaoAtmosfericas = composicaoAtmosfericas;
+	}
+
+	public List<Luas> getLuas() {
+		return luas;
+	}
+
+	public void setLuas(List<Luas> luas) {
+		this.luas = luas;
 	}
 
 }

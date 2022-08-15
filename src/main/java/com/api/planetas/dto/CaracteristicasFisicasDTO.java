@@ -1,5 +1,7 @@
 package com.api.planetas.dto;
 
+import javax.persistence.ManyToOne;
+
 public class CaracteristicasFisicasDTO {
   
 	private Long id;
@@ -9,6 +11,9 @@ public class CaracteristicasFisicasDTO {
     private Double densidadeMedia;
     private Double gravidadeEquatorial;
     private Integer temperatura;
+    
+    @ManyToOne
+	private PlanetasDTO planetasDto;
     
     public CaracteristicasFisicasDTO() {
 		// TODO Auto-generated constructor stub
@@ -68,5 +73,15 @@ public class CaracteristicasFisicasDTO {
 
 	public void setTemperatura(Integer temperatura) {
 		this.temperatura = temperatura;
+	}
+
+	public PlanetasDTO getPlanetasDto() {
+		return planetasDto;
+	}
+
+	public void setPlanetasDto(PlanetasDTO planetasDto) {
+		this.planetasDto = planetasDto;
 	}    
+	
+	
 }

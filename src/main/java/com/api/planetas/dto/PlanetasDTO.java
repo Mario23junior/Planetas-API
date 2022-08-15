@@ -1,5 +1,10 @@
 package com.api.planetas.dto;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+
 public class PlanetasDTO {
 
 	private Long id;
@@ -10,7 +15,19 @@ public class PlanetasDTO {
 	private Double distanciaDoSol;
 	private String duracaoDoDia;
 	private String descricao;
-
+	
+	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
+	private List<CaracteristicasFisicasDTO> caracteristicasFisicasDtos;
+	
+	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
+	private List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDTOs;
+	
+	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
+	private List<ComposicaoAtmosfericasDTO> atmosfericasDTOs;
+	
+	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
+	private List<LuasDTO> luasDto;	
+	
 	public PlanetasDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -78,5 +95,39 @@ public class PlanetasDTO {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
+	public List<CaracteristicasFisicasDTO> getCaracteristicasFisicasDtos() {
+		return caracteristicasFisicasDtos;
+	}
+
+	public void setCaracteristicasFisicasDtos(List<CaracteristicasFisicasDTO> caracteristicasFisicasDtos) {
+		this.caracteristicasFisicasDtos = caracteristicasFisicasDtos;
+	}
+
+	public List<CaracteristicasOrbitaisDTO> getCaracteristicasOrbitaisDTOs() {
+		return caracteristicasOrbitaisDTOs;
+	}
+
+	public void setCaracteristicasOrbitaisDTOs(List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDTOs) {
+		this.caracteristicasOrbitaisDTOs = caracteristicasOrbitaisDTOs;
+	}
+
+	public List<ComposicaoAtmosfericasDTO> getAtmosfericasDTOs() {
+		return atmosfericasDTOs;
+	}
+
+	public void setAtmosfericasDTOs(List<ComposicaoAtmosfericasDTO> atmosfericasDTOs) {
+		this.atmosfericasDTOs = atmosfericasDTOs;
+	}
+
+	public List<LuasDTO> getLuasDto() {
+		return luasDto;
+	}
+
+	public void setLuasDto(List<LuasDTO> luasDto) {
+		this.luasDto = luasDto;
+	}
+	
+	
 
 }

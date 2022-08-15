@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Luas {
@@ -19,6 +20,9 @@ public class Luas {
 	private String massa;
 	private String descricao;
 
+	@ManyToOne
+	private Planetas planetas;
+	
 	public Luas() {
 		// TODO Auto-generated constructor stub
 	}
@@ -86,5 +90,15 @@ public class Luas {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
+	public Planetas getPlanetas() {
+		return planetas;
+	}
+
+	public void setPlanetas(Planetas planetas) {
+		this.planetas = planetas;
+	}
+	
+	
 
 }

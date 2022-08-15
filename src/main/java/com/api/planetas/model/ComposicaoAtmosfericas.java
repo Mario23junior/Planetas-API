@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ComposicaoAtmosfericas {
@@ -22,6 +23,9 @@ public class ComposicaoAtmosfericas {
 	public ComposicaoAtmosfericas() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	@ManyToOne
+	private Planetas planetas;
 
 	public Long getId() {
 		return id;
@@ -86,5 +90,15 @@ public class ComposicaoAtmosfericas {
 	public void setVaporDeAgua(Double vaporDeAgua) {
 		this.vaporDeAgua = vaporDeAgua;
 	}
+
+	public Planetas getPlanetas() {
+		return planetas;
+	}
+
+	public void setPlanetas(Planetas planetas) {
+		this.planetas = planetas;
+	}
+	
+	
 
 }

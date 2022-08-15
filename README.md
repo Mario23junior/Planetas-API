@@ -50,7 +50,7 @@ http://localhost:8080/swagger-ui.html
 
 ## Resultado dos dados da API
 
-``` json
+``` Json
 [
     {
         "id": 1,
@@ -69,8 +69,7 @@ http://localhost:8080/swagger-ui.html
                 "massa": 317.8,
                 "densidadeMedia": 1.326,
                 "gravidadeEquatorial": 2.528,
-                "temperatura": -108,
-                "planetasDto": null
+                "temperatura": -108
             }
         ],
         "caracteristicasOrbitaisDto": [
@@ -81,8 +80,7 @@ http://localhost:8080/swagger-ui.html
                 "perioDoOrbital": 4.331572,
                 "numeroDeSatelitesNaturais": 79,
                 "gravidade": 24.79,
-                "periodoDeRotacao": 9.8,
-                "planetasDto": null
+                "periodoDeRotacao": 9.8
             }
         ],
         "composicaoAtmosfericasDto": [
@@ -94,8 +92,7 @@ http://localhost:8080/swagger-ui.html
                 "metano": 0.3,
                 "amonia": 0.026,
                 "fosforo": 6.0E-4,
-                "vaporDeAgua": 0.25,
-                "planetasDto": null
+                "vaporDeAgua": 0.25
             }
         ],
         "luasDto": [
@@ -107,8 +104,7 @@ http://localhost:8080/swagger-ui.html
                 "excentricidade": 0.0013,
                 "diametroEquatorial": 5.2624,
                 "massa": "1.4819 × 10^23",
-                "descricao": "Ganímedes ou Ganimedes, também chamado Júpiter III, é o principal satélite natural de Júpiter, sendo também o maior satélite natural do Sistema Solar",
-                "planetasDto": null
+                "descricao": "Ganímedes ou Ganimedes, também chamado Júpiter III, é o principal satélite natural de Júpiter, sendo também o maior satélite natural do Sistema Solar"
             }
         ]
     }

@@ -18,19 +18,16 @@ public class PlanetaService {
 	private ModelMapper mapper;
 	private PlanetasRepository planetasRepository;
 
-	private ValidationModule validationRepeat;
-
+ 
 	public PlanetaService(ModelMapper mapper, PlanetasRepository planetasRepository,
 			ValidationModule validationRepeat) {
 		super();
 		this.mapper = mapper;
 		this.planetasRepository = planetasRepository;
-		this.validationRepeat = validationRepeat;
-	}
+ 	}
 
 	public Planetas savePlanet(Planetas planetas) {
-//		validationRepeat.ValidValueDuplicate(planetas);
-		return planetasRepository.save(planetas);
+ 		return planetasRepository.save(planetas);
 	}
 
 	public ResponseEntity<PlanetasDTO> listId(Long id) {

@@ -1,5 +1,7 @@
 package com.api.planetas.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class CaracteristicasOrbitaisDTO {
 
 	private Long id;
@@ -12,6 +14,7 @@ public class CaracteristicasOrbitaisDTO {
 
 	private PlanetasDTO planetasDto;
 
+	@JsonIgnore
 	public PlanetasDTO getPlanetasDto() {
 		return planetasDto;
 	}

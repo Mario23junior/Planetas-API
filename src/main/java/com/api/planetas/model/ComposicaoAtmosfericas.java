@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class ComposicaoAtmosfericas {
 
@@ -91,6 +93,7 @@ public class ComposicaoAtmosfericas {
 		this.vaporDeAgua = vaporDeAgua;
 	}
 
+	@JsonIgnore
 	public Planetas getPlanetas() {
 		return planetas;
 	}

@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Luas {
 
@@ -91,6 +93,7 @@ public class Luas {
 		this.descricao = descricao;
 	}
 
+	@JsonIgnore
 	public Planetas getPlanetas() {
 		return planetas;
 	}

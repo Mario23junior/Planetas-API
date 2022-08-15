@@ -1,5 +1,7 @@
 package com.api.planetas.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class LuasDTO {
 
 	private Long id;
@@ -13,6 +15,7 @@ public class LuasDTO {
 
 	private PlanetasDTO planetasDto;
 
+	@JsonIgnore
 	public PlanetasDTO getPlanetasDto() {
 		return planetasDto;
 	}

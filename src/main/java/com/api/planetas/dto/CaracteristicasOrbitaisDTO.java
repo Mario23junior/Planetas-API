@@ -1,9 +1,7 @@
 package com.api.planetas.dto;
 
-import javax.persistence.ManyToOne;
-
 public class CaracteristicasOrbitaisDTO {
-	
+
 	private Long id;
 	private Double afelio;
 	private Double excentricidade;
@@ -11,11 +9,9 @@ public class CaracteristicasOrbitaisDTO {
 	private Integer numeroDeSatelitesNaturais;
 	private Double gravidade;
 	private Double periodoDeRotacao;
-	
-	@ManyToOne
+
 	private PlanetasDTO planetasDto;
-	
-	
+
 	public PlanetasDTO getPlanetasDto() {
 		return planetasDto;
 	}
@@ -25,7 +21,7 @@ public class CaracteristicasOrbitaisDTO {
 	}
 
 	public CaracteristicasOrbitaisDTO() {
- 	}
+	}
 
 	public Long getId() {
 		return id;
@@ -82,6 +78,5 @@ public class CaracteristicasOrbitaisDTO {
 	public void setPeriodoDeRotacao(Double periodoDeRotacao) {
 		this.periodoDeRotacao = periodoDeRotacao;
 	}
-	
-	
+
 }

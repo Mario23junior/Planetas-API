@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.api.planetas.dto.PlanetasDTO;
+import com.api.planetas.model.Planetas;
 import com.api.planetas.service.PlanetaService;
 
 @RestController
@@ -24,8 +25,8 @@ public class PlanetaController {
 	}
 
 	@PostMapping
-	ResponseEntity<PlanetasDTO> save(@RequestBody PlanetasDTO planetasDTO) {
-		return service.savePlanet(planetasDTO);
+	Planetas save(@RequestBody Planetas planetas) {
+		return service.bodySave(planetas);
 	}
 	
 	@GetMapping("{id}")

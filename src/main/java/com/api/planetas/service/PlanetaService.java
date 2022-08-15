@@ -27,15 +27,15 @@ public class PlanetaService {
 		this.validationRepeat = validationRepeat;
 	}
 
-	public ResponseEntity<PlanetasDTO> savePlanet(PlanetasDTO planetasDTO) {
-		validationRepeat.ValidValueDuplicate(planetasDTO);
- 		Planetas saveplanet = bodySave(mapper.map(planetasDTO, Planetas.class));
-		return ResponseEntity
-				   .status(HttpStatus.OK)
-				   .body(mapper.map(saveplanet, PlanetasDTO.class));
-	}
+//	public ResponseEntity<PlanetasDTO> savePlanet(PlanetasDTO planetasDTO) {
+//		validationRepeat.ValidValueDuplicate(planetasDTO);
+// 		Planetas saveplanet = bodySave(mapper.map(planetasDTO, Planetas.class));
+//		return ResponseEntity
+//				   .status(HttpStatus.OK)
+//				   .body(mapper.map(saveplanet, PlanetasDTO.class));
+//	}
 	
-	private Planetas bodySave(Planetas planeta) {
+	public Planetas bodySave(Planetas planeta) {
 		return planetasRepository.save(planeta);
 	}
 	

@@ -2,9 +2,6 @@ package com.api.planetas.dto;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
-
 public class PlanetasDTO {
 
 	private Long id;
@@ -16,17 +13,10 @@ public class PlanetasDTO {
 	private String duracaoDoDia;
 	private String descricao;
 	
-	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
-	private List<CaracteristicasFisicasDTO> caracteristicasFisicasDtos;
-	
-	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
-	private List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDTOs;
-	
-	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
-	private List<ComposicaoAtmosfericasDTO> atmosfericasDTOs;
-	
-	@OneToMany(mappedBy = "planetasDto", cascade = CascadeType.ALL)
-	private List<LuasDTO> luasDto;	
+ 	private List<CaracteristicasFisicasDTO> caracteristicasFisicasDto;
+ 	private List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDto;
+ 	private List<ComposicaoAtmosfericasDTO> composicaoAtmosfericasDto;
+ 	private List<LuasDTO> luasDto;
 	
 	public PlanetasDTO() {
 		// TODO Auto-generated constructor stub
@@ -96,28 +86,28 @@ public class PlanetasDTO {
 		this.descricao = descricao;
 	}
 
-	public List<CaracteristicasFisicasDTO> getCaracteristicasFisicasDtos() {
-		return caracteristicasFisicasDtos;
+	public List<CaracteristicasFisicasDTO> getCaracteristicasFisicasDto() {
+		return caracteristicasFisicasDto;
 	}
 
-	public void setCaracteristicasFisicasDtos(List<CaracteristicasFisicasDTO> caracteristicasFisicasDtos) {
-		this.caracteristicasFisicasDtos = caracteristicasFisicasDtos;
+	public void setCaracteristicasFisicasDto(List<CaracteristicasFisicasDTO> caracteristicasFisicasDto) {
+		this.caracteristicasFisicasDto = caracteristicasFisicasDto;
 	}
 
-	public List<CaracteristicasOrbitaisDTO> getCaracteristicasOrbitaisDTOs() {
-		return caracteristicasOrbitaisDTOs;
+	public List<CaracteristicasOrbitaisDTO> getCaracteristicasOrbitaisDto() {
+		return caracteristicasOrbitaisDto;
 	}
 
-	public void setCaracteristicasOrbitaisDTOs(List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDTOs) {
-		this.caracteristicasOrbitaisDTOs = caracteristicasOrbitaisDTOs;
+	public void setCaracteristicasOrbitaisDto(List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDto) {
+		this.caracteristicasOrbitaisDto = caracteristicasOrbitaisDto;
 	}
 
-	public List<ComposicaoAtmosfericasDTO> getAtmosfericasDTOs() {
-		return atmosfericasDTOs;
+	public List<ComposicaoAtmosfericasDTO> getComposicaoAtmosfericasDto() {
+		return composicaoAtmosfericasDto;
 	}
 
-	public void setAtmosfericasDTOs(List<ComposicaoAtmosfericasDTO> atmosfericasDTOs) {
-		this.atmosfericasDTOs = atmosfericasDTOs;
+	public void setComposicaoAtmosfericasDto(List<ComposicaoAtmosfericasDTO> composicaoAtmosfericasDto) {
+		this.composicaoAtmosfericasDto = composicaoAtmosfericasDto;
 	}
 
 	public List<LuasDTO> getLuasDto() {
@@ -127,7 +117,8 @@ public class PlanetasDTO {
 	public void setLuasDto(List<LuasDTO> luasDto) {
 		this.luasDto = luasDto;
 	}
-	
+
+	 
 	
 
 }

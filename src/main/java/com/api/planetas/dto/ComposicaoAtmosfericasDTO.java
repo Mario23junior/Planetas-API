@@ -1,7 +1,5 @@
 package com.api.planetas.dto;
 
-import javax.persistence.ManyToOne;
-
 public class ComposicaoAtmosfericasDTO {
 
 	private Long id;
@@ -13,10 +11,8 @@ public class ComposicaoAtmosfericasDTO {
 	private Double fosforo;
 	private Double vaporDeAgua;
 
-	@ManyToOne
 	private PlanetasDTO planetasDto;
-	
-	
+
 	public PlanetasDTO getPlanetasDto() {
 		return planetasDto;
 	}
@@ -24,7 +20,7 @@ public class ComposicaoAtmosfericasDTO {
 	public void setPlanetasDto(PlanetasDTO planetasDto) {
 		this.planetasDto = planetasDto;
 	}
-	
+
 	public ComposicaoAtmosfericasDTO() {
 		// TODO Auto-generated constructor stub
 	}

@@ -1,7 +1,5 @@
 package com.api.planetas.dto;
 
-import javax.persistence.ManyToOne;
-
 public class LuasDTO {
 
 	private Long id;
@@ -13,10 +11,8 @@ public class LuasDTO {
 	private String massa;
 	private String descricao;
 
-	@ManyToOne
 	private PlanetasDTO planetasDto;
-	
-	
+
 	public PlanetasDTO getPlanetasDto() {
 		return planetasDto;
 	}
@@ -24,7 +20,7 @@ public class LuasDTO {
 	public void setPlanetasDto(PlanetasDTO planetasDto) {
 		this.planetasDto = planetasDto;
 	}
-	
+
 	public LuasDTO() {
 		// TODO Auto-generated constructor stub
 	}

@@ -22,6 +22,8 @@ public class CaracteristicasFisicas {
     @ManyToOne
 	private Planetas planetas;
     
+    
+    
     public CaracteristicasFisicas() {
 		// TODO Auto-generated constructor stub
 	}

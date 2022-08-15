@@ -37,4 +37,11 @@ public class FindAlldDataService {
 		PlanetasDTO planetDto = mapper.map(planetas, PlanetasDTO.class);
 		return planetDto;
 	}
+	
+	public List<PlanetasDTO> listAll(){
+		List<PlanetasDTO> list = listAllByData();
+		return list
+				 .stream()
+				 .collect(Collectors.toList());
+	}
 }

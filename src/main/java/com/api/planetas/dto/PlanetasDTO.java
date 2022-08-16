@@ -12,12 +12,12 @@ public class PlanetasDTO {
 	private Double distanciaDoSol;
 	private String duracaoDoDia;
 	private String descricao;
-	
- 	private List<CaracteristicasFisicasDTO> caracteristicasFisicasDto;
- 	private List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDto;
- 	private List<ComposicaoAtmosfericasDTO> composicaoAtmosfericasDto;
- 	private List<LuasDTO> luasDto;
-	
+
+	private List<CaracteristicasFisicasDTO> caracteristicasFisicasDto;
+	private List<CaracteristicasOrbitaisDTO> caracteristicasOrbitaisDto;
+	private List<ComposicaoAtmosfericasDTO> composicaoAtmosfericasDto;
+	private List<LuasDTO> luasDto;
+
 	public PlanetasDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -117,8 +117,9 @@ public class PlanetasDTO {
 	public void setLuasDto(List<LuasDTO> luasDto) {
 		this.luasDto = luasDto;
 	}
-
-	 
 	
+	
+
+ 
 
 }

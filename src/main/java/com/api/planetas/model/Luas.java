@@ -24,7 +24,9 @@ public class Luas {
 
 	@ManyToOne
 	private Planetas planetas;
-	
+
+ 
+
 	public Luas() {
 		// TODO Auto-generated constructor stub
 	}
@@ -101,7 +103,5 @@ public class Luas {
 	public void setPlanetas(Planetas planetas) {
 		this.planetas = planetas;
 	}
-	
-	
 
 }

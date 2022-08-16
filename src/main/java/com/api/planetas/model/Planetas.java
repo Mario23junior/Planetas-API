@@ -132,7 +132,9 @@ public class Planetas {
 	}
 
 	public void setLuas(List<Luas> luas) {
-		this.luas = luas;
+		this.luas = luas;	
 	}
+
+	 
 
 }

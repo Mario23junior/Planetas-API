@@ -25,7 +25,7 @@ public class ComposicaoAtmosfericas {
 	public ComposicaoAtmosfericas() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@ManyToOne
 	private Planetas planetas;
 
@@ -101,7 +101,5 @@ public class ComposicaoAtmosfericas {
 	public void setPlanetas(Planetas planetas) {
 		this.planetas = planetas;
 	}
-	
-	
 
 }

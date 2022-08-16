@@ -3,14 +3,14 @@ package com.api.planetas.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class CaracteristicasFisicasDTO {
-  
+
 	private Long id;
-    private String diametroEquatorial;
-    private Double volume;
-    private Double massa;
-    private Double densidadeMedia;
-    private Double gravidadeEquatorial;
-    private Integer temperatura;
+	private String diametroEquatorial;
+	private Double volume;
+	private Double massa;
+	private Double densidadeMedia;
+	private Double gravidadeEquatorial;
+	private Integer temperatura;
 
 	private PlanetasDTO planetasDto;
 

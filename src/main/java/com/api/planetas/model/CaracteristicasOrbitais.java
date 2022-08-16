@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class CaracteristicasOrbitais {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -20,12 +20,12 @@ public class CaracteristicasOrbitais {
 	private Integer numeroDeSatelitesNaturais;
 	private Double gravidade;
 	private Double periodoDeRotacao;
-	
+
 	@ManyToOne
 	private Planetas planetas;
-	
+
 	public CaracteristicasOrbitais() {
- 	}
+	}
 
 	public Long getId() {
 		return id;
@@ -91,8 +91,5 @@ public class CaracteristicasOrbitais {
 	public void setPlanetas(Planetas planetas) {
 		this.planetas = planetas;
 	}
-	
-	
-	
-	
+
 }

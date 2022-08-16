@@ -10,23 +10,22 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class CaracteristicasFisicas {
-  
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-    private String diametroEquatorial;
-    private Double volume;
-    private Double massa;
-    private Double densidadeMedia;
-    private Double gravidadeEquatorial;
-    private Integer temperatura;
-    
-    @ManyToOne
+	private String diametroEquatorial;
+	private Double volume;
+	private Double massa;
+	private Double densidadeMedia;
+	private Double gravidadeEquatorial;
+	private Integer temperatura;
+
+	@ManyToOne
 	private Planetas planetas;
-    
-    
-    
-    public CaracteristicasFisicas() {
+
+ 
+	public CaracteristicasFisicas() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -93,6 +92,6 @@ public class CaracteristicasFisicas {
 
 	public void setPlanetas(Planetas planetas) {
 		this.planetas = planetas;
-	}    
-	
+	}
+
 }
